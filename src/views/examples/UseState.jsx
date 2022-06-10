@@ -5,6 +5,7 @@ import SectionTitle from "../../components/layout/SectionTitle";
 const UseState = (props) => {
   // Criando estado em componente funcional
   const [count, setCount] = useState(0);
+  const [name, setName] = useState("");
 
   return (
     <div className="UseState">
@@ -37,6 +38,13 @@ const UseState = (props) => {
         </div>
       </div>
       <SectionTitle title="Exercio #02" />
+      <input
+        type="text"
+        className="input"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+      <span className="text">{name}</span>
     </div>
   );
 };
