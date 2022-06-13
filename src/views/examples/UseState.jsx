@@ -15,7 +15,11 @@ const UseState = (props) => {
       />
       <SectionTitle title="Exercio #01" />
       <div className="center">
-        <span className="text">{count}</span>
+        <span className="text">
+          {count <= -1
+            ? window.location.reload(alert("Nao aceitamos numeros negativos"))
+            : count}
+        </span>
         <div>
           <button className="btn" onClick={() => setCount(count + 1)}>
             +1
@@ -37,6 +41,8 @@ const UseState = (props) => {
           </button>
         </div>
       </div>
+
+      {/* exercicio 2 */}
       <SectionTitle title="Exercio #02" />
       <input
         type="text"
